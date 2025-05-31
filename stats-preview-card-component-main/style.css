@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  width: 85%;
+  height: 600px;
+  padding: 6rem;
+}
+
+.left-box {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.5rem 0 0 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+.card .left-box .heading h1 {
+  margin-bottom: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.card .left-box .heading p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.card .left-box span {
+  color: hsl(277, 64%, 61%);
+}
+
+.card .left-box .stats-grid {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.card .left-box .stats-grid .stats-item h2 {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.2rem;
+}
+
+.card .left-box .stats-grid .stats-item p {
+  font-size: small;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.card .right-box {
+  background-image: linear-gradient(
+      rgba(170, 92, 219, 0.6),
+      rgba(170, 92, 219, 0.6)
+    ),
+    url("./images/image-header-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 0.5rem 0.5rem 0;
+  flex: 1;
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .card .left-box {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  .card .left-box .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .card .left-box .stats-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card .right-box {
+    width: 100%;
+    order: -1;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+}
